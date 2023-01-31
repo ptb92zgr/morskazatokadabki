@@ -1,0 +1,146 @@
+@mixin background{
+	background: rgba( 255, 255, 255, 0.35 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 12.5px );
+-webkit-backdrop-filter: blur( 12.5px );
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	background-image: url(../images/bg.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+
+/*navigation*/
+
+.menu {
+	position: relative;
+	
+	&__btn {
+		position: fixed;
+		top: 0;
+		right: 0;
+		margin: 5px;
+		background: none;
+		border: none;
+		z-index: 99;
+	}
+
+	&__items {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 2rem;
+		text-align: center;
+		text-transform: uppercase;
+		transition: 0.7s ease-in-out;
+		z-index: 80;
+		@include background;
+	}
+	&__link {
+		position: relative;
+		width: 100%;
+		height: calc(100vh / 7);
+		line-height: calc(100vh / 7);
+		text-decoration: none;
+		color: black;
+	}
+
+	&__link:hover {
+		text-decoration: underline;
+	}
+}
+
+.show__menu {
+	left: 0%;
+}
+
+.ham {
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	transition: transform 400ms;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.hamRotate.active {
+	transform: rotate(45deg);
+}
+.hamRotate180.active {
+	transform: rotate(180deg);
+}
+.line {
+	fill: none;
+	transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+	stroke: black;
+	stroke-width: 5.5;
+	stroke-linecap: round;
+}
+
+.ham .top {
+	stroke-dasharray: 40 172;
+}
+.ham .middle {
+	stroke-dasharray: 40 111;
+}
+.ham .bottom {
+	stroke-dasharray: 40 172;
+}
+.ham.active .top {
+	stroke-dashoffset: -132px;
+}
+.ham.active .middle {
+	stroke-dashoffset: -71px;
+}
+.ham.active .bottom {
+	stroke-dashoffset: -132px;
+}
+
+/*header*/
+
+.welcome {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	font-size: 2rem;
+	text-transform: uppercase;
+	color: black;
+
+	&__text {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 4rem;
+	}
+}
+
+//content//
+
+.about{
+	@include background;
+}
