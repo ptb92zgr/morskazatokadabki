@@ -3,6 +3,8 @@ const menuItems = document.querySelector(".menu__items");
 const menuLink = document.querySelectorAll("menu__link");
 const lines = document.querySelectorAll("path");
 const sections = document.querySelectorAll(".section");
+const btns = document.querySelectorAll(".section__btn");
+
 let slideIndex = 1;
 
 // //slider

@@ -129,6 +129,11 @@ body {
   margin: 30px auto;
   color: rgb(17, 93, 129);
 }
+.section__title-margin {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 40px 0;
+}
 .section__description {
   margin: 30px;
   color: rgb(17, 93, 129);
@@ -168,6 +173,15 @@ body {
   top: 50%;
   transform: translateY(50%);
 }
+.section__form {
+  background-color: rgb(247, 245, 237);
+  color: rgb(17, 93, 129);
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+}
 
 h2.light {
   margin-bottom: 60px;
@@ -181,7 +195,7 @@ h2.light {
 .slider__btn--next {
   border: none;
   background: none;
-  color: rgb(17, 93, 129);
+  color: rgba(6, 6, 6, 0.487);
   font-size: 2rem;
   padding: 10px;
 }

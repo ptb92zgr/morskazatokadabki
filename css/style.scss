@@ -137,6 +137,12 @@ body {
     text-align: center;
     margin: 30px auto;
     color: $thirdColor;
+
+    &-margin{
+      text-transform: uppercase;
+      text-align: center;
+      padding: 40px 0;
+    }
   }
 
   &__description {
@@ -187,6 +193,16 @@ box-shadow: 0px 0px 30px 0px rgba(17, 93, 129, 1);
     transform: translateY(50%);
   }
 
+  &__form{
+    background-color: $firstColor;
+    color: $thirdColor;
+  }
+
+}
+
+.contact__form{
+  display: flex;
+  flex-direction: column;
 }
 
 h2.light{
@@ -204,7 +220,7 @@ h2.light{
 .slider__btn--next {
 	border: none;
 	background: none;
-	color: $thirdColor;
+	color: rgba(6, 6, 6, 0.487);
 	font-size: 2rem;
 	padding: 10px;
 }
