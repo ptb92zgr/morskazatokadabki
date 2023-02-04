@@ -1,48 +1,85 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morska zatoka Dąbki</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Open+Sans:wght@300;400;700&display=swap"
+        rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./scss/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <nav class="menu">
+
+    <body>
+        <nav class="menu">
+            <button class="menu__btn">
+                <svg class="ham" viewBox="0 0 100 100" width="60" onclick="this.classList.toggle('active')">
+                    <path class="line top"
+                        d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
+                    <path class="line middle"
+                        d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272" />
+                    <path class="line bottom"
+                        d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
+                </svg>
+            </button>
+            <div class="menu__items">
+                <a href="index.html" class="menu__item">strona główna</a>
+                <a href="houses.html" class="menu__item">domki</a>
+                <a href="prices.html" class="menu__item">cennik</a>
+                <a href="attractions.html" class="menu__item">atrakcje</a>
+                <a href="gallery.html" class="menu__item">galeria</a>
+                <a href="contact.html" class="menu__item">kontakt</a>
+            </div>
+
+        </nav>
+
+        <h1 class="welcome__txt">morska zatoka dąbki</h1>
+
+        <div class="wrapper">
         
-        <button class="menu__btn">
-            <svg class="ham" viewBox="0 0 100 100" width="60" onclick="this.classList.toggle('active')">
-                <path class="line top"
-                    d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
-                <path class="line middle"
-                    d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272" />
-                <path class="line bottom"
-                    d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
-            </svg></button>
-        <div class="menu__items">
-            <a href="./index.html" class="menu__link">Strona główna</a>
-            <a href="./houses.html" class="menu__link">domki</a>
-            <a href="./prices.html" class="menu__link">cennik</a>
-            <a href="./index.html" class="menu__link">morska zatoka dąbki</a>
-            <a href="./attractions.html" class="menu__link">atrakcje</a>
-            <a href="./gallery.html" class="menu__link">galeria</a>
-            <a href="./contact.html" class="menu__link">kontakt</a>
         </div>
-    </nav>
-   
+
+        <footer class="footer">
+            <h2 class="footer__title">Kontakt</h2>
+            <a href="index.html" class="footer__btn">Strona główna</a>
+            <div class="footer__address">
+                <i class="bi bi-geo-alt"></i>
+                <p class="footer__localization">Morska zatoka - Dąbki
+                    76-156 Dąbki,
+                    Słoneczna 3b</p>
+            </div>
+            <div class="footer__phone">
+                <i class="bi bi-telephone"></i>
+                <a href="tel:530871567" class="footer__link">530-871-567</a>
+            </div>
+             <div class="footer__mail">
+                <i class="bi bi-envelope"></i>
+                <a href="mailto:morskazatoka@gmail.com" class="footer__link">morskazatoka@gmail.com</a>
+            </div>
+            <div class="footer__fb">
+                <i class="bi bi-facebook"></i>
+                <a href="https://www.facebook.com/morskazatoka" target="_blank"
+                    class="footer__link">Facebook</a>
+            </div>
+            <div class="footer__map">
+                <iframe
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2323.789719974185!2d16.323022316066794!3d54.378364880208146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4701d57f3f4507d7%3A0x4de074f4ee70f25a!2sDomki%20Apartamentowe%20Morska%20Zatoka!5e0!3m2!1spl!2spl!4v1675285257889!5m2!1spl!2spl" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-    <script src="index.js"></script>
-</body>
+        <script src="index.js"></script>
+    </body>
 
 </html>

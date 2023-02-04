@@ -1,7 +1,7 @@
 const toggleMenuBtn = document.querySelector(".menu__btn");
 const menuItems = document.querySelector(".menu__items");
 const menuLink = document.querySelectorAll("menu__link");
-
+const lines = document.querySelectorAll("path");
 //automatic slider for about section
 
 // automaticSlides();
@@ -52,10 +52,6 @@ const menuLink = document.querySelectorAll("menu__link");
 // }
 
 const showMenu = () => {
-  menuItems.classList.toggle("show__menu");
-};
-
-const hideMenu = () => {
   menuItems.classList.toggle("show__menu");
 };
 
