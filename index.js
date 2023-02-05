@@ -1,15 +1,10 @@
 const toggleMenuBtn = document.querySelector(".menu__btn");
 const menuItems = document.querySelector(".menu__items");
 const menuLink = document.querySelectorAll("menu__link");
-const lines = document.querySelectorAll("path");
-const sections = document.querySelectorAll(".section");
-const btns = document.querySelectorAll(".section__btn");
+const sections = document.querySelectorAll(".section__slide");
 
 let slideIndex = 1;
-
-// //slider
 showSlides(slideIndex);
-
 // Button controls
 function plusSlides(n) {
   showSlides((slideIndex += n));
@@ -34,13 +29,29 @@ function showSlides(n) {
 
     if (window.matchMedia("(min-width: 1024px)")) {
     }
+    slides[slideIndex - 1].style.display = "block";
   }
-  slides[slideIndex - 1].style.display = "block";
 }
 
 const showMenu = () => {
   menuItems.classList.toggle("show__menu");
 };
+
+const hideMenu = () => {
+  menuItems.classList.toggle("show__menu");
+};
+
+//appearing sections function
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle("appear", entry.isIntersecting);
+  });
+});
+
+sections.forEach((section) => {
+  observer.observe(section);
+});
 
 toggleMenuBtn.addEventListener("click", showMenu);
 menuItems.addEventListener("click", showMenu);
