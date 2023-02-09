@@ -21,13 +21,31 @@ $firstTransparentColor: rgba(240, 235, 216, 0.366);
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+html {
+  // background: url(../images/bg.jpg) no-repeat center center fixed;
   background-image: url(../images/bg.jpg);
-  background-attachment: fixed;
   background-size: 500%;
-  background-position-x: center;
   background-repeat: no-repeat;
+  // background-position-y: 1000% ;
+  // background-attachment: fixed;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
+}
+
+body {
+  // background-size: cover;
+  // background-position-y: 150%;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
   font-family: "Open Sans", sans-serif;
+}
+
+.bg {
+  position: absolute;
+  z-index: -200;
+  width: 300vw;
 }
 
 .menu {
@@ -61,6 +79,7 @@ body {
     text-decoration: none;
     color: $secondColor;
     font-weight: bold;
+    transition: color .3s;
   }
 }
 
@@ -121,8 +140,10 @@ body {
 }
 
 .wrapper {
-  margin-top: 100vh;
-  margin-bottom: 100px;
+  margin-top: 75vh;
+  // margin-bottom: 100px;
+  width: 100%;
+  height: 100%;
 }
 
 .section {
@@ -138,7 +159,7 @@ body {
     margin: 30px auto;
     color: $thirdColor;
 
-    &-margin{
+    &-margin {
       text-transform: uppercase;
       text-align: center;
       padding: 40px 0;
@@ -157,6 +178,7 @@ body {
   }
 
   &__list-item {
+    list-style-type: none;
     margin-bottom: 20px;
   }
 
@@ -173,17 +195,17 @@ body {
     border-radius: 20px;
     padding: 13px 30px;
     -webkit-box-shadow: 0px 0px 30px 0px rgba(17, 93, 129, 1);
--moz-box-shadow: 0px 0px 30px 0px rgba(17, 93, 129, 1);
-box-shadow: 0px 0px 30px 0px rgba(17, 93, 129, 1);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(17, 93, 129, 1);
+    box-shadow: 0px 0px 30px 0px rgba(17, 93, 129, 1);
   }
 
   &__slide {
-		max-width: 100vw;
-		display: none;
+    max-width: 100vw;
+    display: none;
     position: relative;
-	}
+  }
 
-  &__buttons{
+  &__buttons {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -193,19 +215,18 @@ box-shadow: 0px 0px 30px 0px rgba(17, 93, 129, 1);
     transform: translateY(50%);
   }
 
-  &__form{
+  &__form {
     background-color: $firstColor;
     color: $thirdColor;
   }
-
 }
 
-.contact__form{
+.contact__form {
   display: flex;
   flex-direction: column;
 }
 
-h2.light{
+h2.light {
   margin-bottom: 60px;
 }
 
@@ -213,27 +234,23 @@ h2.light{
   background-color: $firstColor;
 }
 
-
-	
-
 .slider__btn--prev,
 .slider__btn--next {
-	border: none;
-	background: none;
-	color: rgba(6, 6, 6, 0.487);
-	font-size: 2rem;
-	padding: 10px;
+  border: none;
+  background: none;
+  color: rgba(6, 6, 6, 0.487);
+  font-size: 2rem;
+  padding: 10px;
 }
 
 .fade {
-	animation-name: fade;
-	animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
-
 .appear {
-	transform: scale(1);
-	opacity: 1;
+  transform: scale(1);
+  opacity: 1;
 }
 
 span {
@@ -313,5 +330,61 @@ img {
   &__img {
     width: 350px;
     margin: 30px 0;
+  }
+}
+
+@media (min-width: 320px) {
+  html {
+    background-size: 500%;
+  }
+}
+
+@media (min-width: 420px) {
+  html {
+    background-size: 350%;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    background-size: 300%;
+  }
+}
+@media (min-width: 500px) {
+  html {
+    background-size: 250%;
+  }
+}
+@media (min-width: 660px) {
+  html {
+    background-size: 200%;
+  }
+}
+@media (min-width: 760px) {
+  html {
+    background-size: 150%;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    background-size: 100%;
+  }
+}
+@media (min-width: 1025px) {
+  .menu {
+    &__btn {
+      display: none;
+    }
+    &__items {
+      transform: scaleY(100%);
+      flex-direction: row;
+      height: 10vh;
+    }
+    &__item{
+      line-height: 10vh;
+    }
+    &__item:hover{
+      color: $firstColor;
+      text-decoration: underline;
+    }
   }
 }

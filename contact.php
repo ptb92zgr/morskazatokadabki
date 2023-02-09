@@ -9,5 +9,5 @@ $message = $_POST['message'];
 $headers = 'From: ' . $name . $surname" .
 $headers .= 'Content-Type: text\html; charset-utf-8\r\n';
 
-mail($to, $subject, $message, $headers);
+mail($to, , $name, $surname, $email, $number, $subject, $message, $headers);
 ?>
