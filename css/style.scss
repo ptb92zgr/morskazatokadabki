@@ -79,7 +79,7 @@ body {
     text-decoration: none;
     color: $secondColor;
     font-weight: bold;
-    transition: color .3s;
+    transition: color 0.3s;
   }
 }
 
@@ -133,7 +133,7 @@ body {
   text-align: center;
   transform: translateY(50vh);
   text-transform: uppercase;
-  font-family: "Mansalva", cursive;
+  font-family: "Cantata One", cursive;
   color: $secondColor;
   font-size: 50px;
   text-shadow: 0px 0px 17px rgba(17, 93, 129, 1);
@@ -361,12 +361,18 @@ img {
 }
 @media (min-width: 760px) {
   html {
-    background-size: 150%;
+    background-size: 300%;
   }
 }
+@media (min-width: 960px) {
+  html {
+    background-size: 250%;
+  }
+}
+
 @media (min-width: 1024px) {
   html {
-    background-size: 100%;
+    background-size: 200%;
   }
 }
 @media (min-width: 1025px) {
@@ -379,12 +385,18 @@ img {
       flex-direction: row;
       height: 10vh;
     }
-    &__item{
+    &__item {
       line-height: 10vh;
     }
-    &__item:hover{
+    &__item:hover {
       color: $firstColor;
       text-decoration: underline;
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    background-size: 150%;
   }
 }
