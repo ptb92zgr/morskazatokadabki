@@ -55,3 +55,5 @@ sections.forEach((section) => {
 
 toggleMenuBtn.addEventListener("click", showMenu);
 menuItems.addEventListener("click", showMenu);
+
+//author: Patryk Janicki
