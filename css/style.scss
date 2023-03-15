@@ -260,6 +260,20 @@ body {
   }
 }
 
+.center {
+  background-image: url(../images/img3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  margin: 0 auto;
+  width: 70vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
 .facilities__wrapper {
   width: 100vw;
   display: flex;
