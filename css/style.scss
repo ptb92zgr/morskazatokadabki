@@ -23,7 +23,7 @@ $firstTransparentColor: rgba(240, 235, 216, 0.366);
 
 html {
   // background: url(../images/bg.jpg) no-repeat center center fixed;
-  background-image: url(../images/bg.jpg);
+  background-image: url(../images/bg2.jpg);
   background-size: 500%;
   background-repeat: no-repeat;
   // background-position-y: 1000% ;
@@ -266,12 +266,8 @@ body {
   background-repeat: no-repeat;
   background-position-y: center;
   margin: 0 auto;
-  width: 70vw;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 60px;
+  width: 90vw;
+  height: 90vh;
 }
 
 .facilities__wrapper {
@@ -423,6 +419,10 @@ img {
 }
 
 @media (min-width: 460px) {
+  .center {
+    width: 70vw;
+    height: 70vh;
+  }
   html {
     background-size: 350%;
   }
